@@ -1,0 +1,44 @@
+{
+  "name": "@ec-nordbund/renovate-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "renovate-config": {
+    "default": {
+      "extends": [
+        ":pinAllExceptPeerDependencies",
+        ":separateMajorReleases",
+        ":separateMultipleMajorReleases",
+        ":separatePatchReleases",
+        ":renovatePrefix",
+        ":semanticPrefixChore",
+        ":rebaseStalePrs",
+        ":prImmediately",
+        ":disableRateLimiting",
+        ":automergeDigest",
+        ":updateNotScheduled",
+        ":automergeLinters",
+        ":automergeTypes",
+        ":label(deps)",
+        ":assignAndReview(mathe42)",
+        ":enableVulnerabilityAlerts",
+        ":semanticCommits",
+        ":dependencyDashboard",
+        ":dependencyDashboardApproval",
+        "group:recommended",
+        "group:monorepos"
+      ],
+      "configWarningReuseIssue": false,
+      "packageRules": [
+        {
+          "matchUpdateTypes": [
+            "minor",
+            "patch",
+            "pin",
+            "digest"
+          ],
+          "automerge": true
+        }
+      ]
+    }
+  }
+}
